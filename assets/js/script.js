@@ -122,7 +122,8 @@ const pages = document.querySelectorAll("[data-page]");
 // Thêm sự kiện điều hướng
 navigationLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    const targetPage = link.innerHTML.toLowerCase();
+    const targetPage = link.dataset.navLink; // ✅ Lấy từ data-nav-link thay vì innerHTML
+
     pages.forEach((page) => {
       if (page.dataset.page === targetPage) {
         page.classList.add("active");
@@ -132,14 +133,11 @@ navigationLinks.forEach((link) => {
     });
 
     navigationLinks.forEach((navLink) => {
-      if (navLink === link) {
-        navLink.classList.add("active");
-      } else {
-        navLink.classList.remove("active");
-      }
+      navLink.classList.toggle("active", navLink === link);
     });
 
     // Scroll về đầu trang
     window.scrollTo(0, 0);
   });
 });
+
