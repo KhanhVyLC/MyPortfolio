@@ -68,7 +68,7 @@ const filterItems = document.querySelectorAll("[data-filter-item]");
 const CATEGORY_MAP = {
   'all': ['all', 'tất cả', 'tous', 'alle', 'todos', 'все'],
   'data': ['data', 'dữ liệu', 'données', 'daten', 'datos', 'данные'],
-  'web': ['web', 'trang web', 'site web'],
+  'Web & Mobile Applications': ['web & ứng dụng di động', 'Web & Mobile Applications'],
   'machine learning': ['machine learning', 'học máy', 'apprentissage automatique', 'máy học'],
   'business': ['business', 'kinh doanh', 'affaires', 'geschäft', 'negocio', 'бизнес']
 };
